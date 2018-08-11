@@ -19,7 +19,7 @@
 //#include <pthread.h>
 //#include <stdint.h>
 
-#define MAX_BUFFER_SIZE 1024
+//#define MAX_BUFFER_SIZE 1024
 
 int main(int argc, char *argv[])
 {
@@ -49,6 +49,7 @@ int main(int argc, char *argv[])
         ticks = time(NULL);
         snprintf(sendBuff, sizeof(sendBuff), "%.24s\r\n", ctime(&ticks));
         write(connfd, sendBuff, strlen(sendBuff));
+        puts("sent data");
 
         close(connfd);
         sleep(1);
