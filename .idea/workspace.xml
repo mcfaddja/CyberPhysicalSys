@@ -31,12 +31,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2ba6b1b-65ed-4974-9388-01fb8741a1c8" name="Default" comment="sockets, initial commit">
-      <change afterPath="$PROJECT_DIR$/sockets/server/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CyberPhysicalSys.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CyberPhysicalSys.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sockets/server/server-sockets.c" beforeDir="false" afterPath="$PROJECT_DIR$/sockets/server/server-sockets.c" afterDir="false" />
+    <list default="true" id="f2ba6b1b-65ed-4974-9388-01fb8741a1c8" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/sockets/server/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/sockets/server/main.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/sockets/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,7 +44,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="server-sockets.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="server-sockets.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sockets/server/server-sockets.c">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -57,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sockets/server/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="521">
+              <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -93,6 +89,7 @@
         <option value="$PROJECT_DIR$/server/server-sockets.h" />
         <option value="$PROJECT_DIR$/sockets/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/sockets/server/server-sockets.c" />
+        <option value="$PROJECT_DIR$/sockets/server/main.c" />
       </list>
     </option>
   </component>
@@ -112,14 +109,288 @@
     <option name="height" value="940" />
   </component>
   <component name="ProjectUserFactors">
+    <factor id="binaryFeature:liftShorter">
+      <dailyData date="10-08-2018">
+        <observation name="false" value="12.0" />
+      </dailyData>
+    </factor>
+    <factor id="binaryFeature:liftShorterClasses">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="12.0" />
+      </dailyData>
+    </factor>
+    <factor id="binaryFeature:middleMatching">
+      <dailyData date="10-08-2018">
+        <observation name="false" value="12.0" />
+      </dailyData>
+    </factor>
+    <factor id="binaryFeature:nonGeneric">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="12.0" />
+      </dailyData>
+    </factor>
+    <factor id="binaryFeature:prox_inResolveScope">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="false" value="4.0" />
+      </dailyData>
+    </factor>
+    <factor id="binaryFeature:prox_openedInEditor">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="true" value="4.0" />
+      </dailyData>
+    </factor>
+    <factor id="binaryFeature:prox_sameDirectory">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="true" value="4.0" />
+      </dailyData>
+    </factor>
+    <factor id="binaryFeature:prox_sameLogicalRoot">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="false" value="4.0" />
+      </dailyData>
+    </factor>
+    <factor id="binaryFeature:prox_sdkOrLibrary">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="false" value="4.0" />
+      </dailyData>
+    </factor>
+    <factor id="binaryFeature:templates">
+      <dailyData date="10-08-2018">
+        <observation name="false" value="12.0" />
+      </dailyData>
+    </factor>
+    <factor id="categoricalFeature:accessible">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="12.0" />
+      </dailyData>
+    </factor>
+    <factor id="categoricalFeature:expectedType">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="12.0" />
+      </dailyData>
+    </factor>
+    <factor id="categoricalFeature:kind">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="12.0" />
+      </dailyData>
+    </factor>
+    <factor id="categoricalFeature:prox_groovyReferenceListWeigher">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="12.0" />
+      </dailyData>
+    </factor>
+    <factor id="categoricalFeature:prox_javaInheritance">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="null" value="4.0" />
+      </dailyData>
+    </factor>
+    <factor id="categoricalFeature:prox_referenceList">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="unknown" value="4.0" />
+      </dailyData>
+    </factor>
+    <factor id="categoricalFeature:recursion">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="12.0" />
+      </dailyData>
+    </factor>
     <factor id="completionFinishedType">
       <dailyData date="10-08-2018">
-        <observation name="cancelled" value="37.0" />
+        <observation name="cancelled" value="125.0" />
+        <observation name="explicitSelect" value="6.0" />
+        <observation name="typedSelect" value="6.0" />
+      </dailyData>
+    </factor>
+    <factor id="completionType">
+      <dailyData date="10-08-2018">
+        <observation name="BASIC" value="20.0" />
       </dailyData>
     </factor>
     <factor id="completionUsage">
       <dailyData date="10-08-2018">
-        <observation name="count" value="37.0" />
+        <observation name="count" value="137.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:explicitProximity">
+      <dailyData date="10-08-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="23.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:grouping">
+      <dailyData date="10-08-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="23.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:mostUsed">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="12.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:nameEnd">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="12.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:position">
+      <dailyData date="10-08-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="23.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:prefix">
+      <dailyData date="10-08-2018">
+        <observation name="average" value="-1152.478261" />
+        <observation name="count" value="23.0" />
+        <observation name="max" value="-1152.0" />
+        <observation name="min" value="-1153.0" />
+        <observation name="variance" value="0.144317" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:priority">
+      <dailyData date="10-08-2018">
+        <observation name="average" value="28.26087" />
+        <observation name="count" value="23.0" />
+        <observation name="max" value="150.0" />
+        <observation name="min" value="-10.0" />
+        <observation name="variance" value="2854.219958" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:prox_explicitlyImported">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="average" value="300.0" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="300.0" />
+        <observation name="min" value="300.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:prox_knownElement">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:prox_sameModule">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="average" value="2.0" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="2.0" />
+        <observation name="min" value="2.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:prox_samePsiMember">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:query_length">
+      <dailyData date="10-08-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="23.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:result_length">
+      <dailyData date="10-08-2018">
+        <observation name="average" value="6.043478" />
+        <observation name="count" value="23.0" />
+        <observation name="max" value="9.0" />
+        <observation name="min" value="1.0" />
+        <observation name="variance" value="3.758054" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:sameWords">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="12.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:shorter">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="12.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:simple">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="12.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:sorter">
+      <dailyData date="10-08-2018">
+        <observation name="average" value="1.0" />
+        <observation name="count" value="23.0" />
+        <observation name="max" value="1.0" />
+        <observation name="min" value="1.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:statics">
+      <dailyData date="10-08-2018">
+        <observation name="UNDEFINED" value="12.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:stats">
+      <dailyData date="10-08-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="23.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+    </factor>
+    <factor id="itemPosition">
+      <dailyData date="10-08-2018">
+        <observation name="0" value="6.0" />
+      </dailyData>
+    </factor>
+    <factor id="mnemonicsUsage">
+      <dailyData date="10-08-2018">
+        <observation name="total" value="5.0" />
+        <observation name="withMnemonics" value="0.0" />
+      </dailyData>
+    </factor>
+    <factor id="prefixLength">
+      <dailyData date="10-08-2018">
+        <observation name="1" value="1.0" />
+        <observation name="3" value="2.0" />
+        <observation name="4" value="3.0" />
+      </dailyData>
+    </factor>
+    <factor id="timeBetweenTyping">
+      <dailyData date="10-08-2018">
+        <observation name="average" value="208.321429" />
+        <observation name="count" value="28.0" />
       </dailyData>
     </factor>
   </component>
@@ -195,7 +466,7 @@
       <updated>1533941470211</updated>
       <workItem from="1533941472741" duration="430000" />
       <workItem from="1533941908331" duration="249000" />
-      <workItem from="1533942210003" duration="537000" />
+      <workItem from="1533942210003" duration="1193000" />
     </task>
     <task id="LOCAL-00001" summary="sockets server. initial commit">
       <created>1533941823868</created>
@@ -211,15 +482,28 @@
       <option name="project" value="LOCAL" />
       <updated>1533941885853</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="sockets server, initial commit - 2">
+      <created>1533946684180</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1533946684180</updated>
+    </task>
+    <task id="LOCAL-00004" summary="misc">
+      <created>1533946695459</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1533946695459</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1216000" />
+    <option name="totallyTimeSpent" value="1872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="125" y="22" width="1400" height="940" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Cargo" order="3" />
@@ -258,7 +542,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="sockets server. initial commit" />
     <MESSAGE value="sockets, initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="sockets, initial commit" />
+    <MESSAGE value="sockets server, initial commit - 2" />
+    <MESSAGE value="misc" />
+    <option name="LAST_COMMIT_MESSAGE" value="misc" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/server/server-sockets.c" />
@@ -278,17 +564,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sockets/server/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sockets/server/server-sockets.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sockets/server/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
         </state>
       </provider>
     </entry>
