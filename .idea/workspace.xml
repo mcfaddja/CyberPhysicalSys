@@ -32,7 +32,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2ba6b1b-65ed-4974-9388-01fb8741a1c8" name="Default" comment="finished initial sockets client">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sockets/client/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/sockets/client/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sockets/server/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/sockets/server/main.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/sockets/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,13 +52,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="c" value="123" />
+          <entry key="c" value="124" />
           <entry key="txt" value="50" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="123" />
+          <entry key="ObjectiveC" value="124" />
           <entry key="PLAIN_TEXT" value="50" />
         </counts>
       </usages-collector>
@@ -89,8 +90,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/sockets/server/main.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="149">
-                  <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+                <state relative-caret-position="300">
+                  <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
                 </state>
               </provider>
             </entry>
@@ -120,8 +121,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/sockets/client/main.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+                <state relative-caret-position="270">
+                  <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -712,7 +713,7 @@
       <workItem from="1533941472741" duration="430000" />
       <workItem from="1533941908331" duration="249000" />
       <workItem from="1533942210003" duration="1193000" />
-      <workItem from="1533949683201" duration="4025000" />
+      <workItem from="1533949683201" duration="4128000" />
     </task>
     <task id="LOCAL-00001" summary="sockets server. initial commit">
       <created>1533941823868</created>
@@ -760,7 +761,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5897000" />
+    <option name="totallyTimeSpent" value="6000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="22" width="1517" height="940" extended-state="0" />
@@ -831,15 +832,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sockets/server/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sockets/client/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        <state relative-caret-position="270">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
         </state>
       </provider>
     </entry>
