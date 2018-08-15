@@ -91,50 +91,51 @@ int main(int argc, char *argv[])
     snprintf(buff, sizeof(buff), "%s\r\n", theData->device_id);
     write(sockfd, buff, strlen(buff));
 
-    snprintf(buff, sizeof(buff), "%.24s\r\n", ctime(%theData->measurement_time));
+    time_t ticks = theData->measurement_time;
+    snprintf(buff, sizeof(buff), "%.24s\r\n", ctime(&ticks));
     write(sockfd, buff, strlen(buff));
 
-    snprintf(buff, sizeof(buff), "%s", theData->sensor_id);
+    snprintf(buff, sizeof(buff), "%s\r\n", theData->sensor_id);
     write(sockfd, buff, strlen(buff));
 
-    snprintf(buff, sizeof(buff), "gx: %f", theData->gx);
+    snprintf(buff, sizeof(buff), "gx: %f\r\n", theData->gx);
     write(sockfd, buff, strlen(buff));
 
-    snprintf(buff, sizeof(buff), "gy: %f", theData->gy);
+    snprintf(buff, sizeof(buff), "gy: %f\r\n", theData->gy);
     write(sockfd, buff, strlen(buff));
 
-    snprintf(buff, sizeof(buff), "gz: %f", theData->gz);
+    snprintf(buff, sizeof(buff), "gz: %f\r\n", theData->gz);
     write(sockfd, buff, strlen(buff));
 
-    snprintf(buff, sizeof(buff), "ax: %f", theData->ax);
+    snprintf(buff, sizeof(buff), "ax: %f\r\n", theData->ax);
     write(sockfd, buff, strlen(buff));
 
-    snprintf(buff, sizeof(buff), "ay: %f", theData->ay);
+    snprintf(buff, sizeof(buff), "ay: %f\r\n", theData->ay);
     write(sockfd, buff, strlen(buff));
 
-    snprintf(buff, sizeof(buff), "az: %f", theData->az);
+    snprintf(buff, sizeof(buff), "az: %f\r\n", theData->az);
     write(sockfd, buff, strlen(buff));
 
-    snprintf(buff, sizeof(buff), "mx: %f", theData->mx);
+    snprintf(buff, sizeof(buff), "mx: %f\r\n", theData->mx);
     write(sockfd, buff, strlen(buff));
 
-    snprintf(buff, sizeof(buff), "my: %f", theData->my);
+    snprintf(buff, sizeof(buff), "my: %f\r\n", theData->my);
     write(sockfd, buff, strlen(buff));
 
-    snprintf(buff, sizeof(buff), "mz: %f", theData->mz);
+    snprintf(buff, sizeof(buff), "mz: %f\r\n", theData->mz);
     write(sockfd, buff, strlen(buff));
 
 
 
-    while ( (n = read(sockfd, recvBuff, sizeof(recvBuff)-1)) > 0)
-    {
-        recvBuff[n] = 0;
-        if(fputs(recvBuff, stdout) == EOF)
-        {
-            printf("\n Error : Fputs error\n");
-        }
-    }
-
+//    while ( (n = read(sockfd, recvBuff, siøzeof(recvBuff)-1)) > 0)
+//    {
+//        recvBuff[n] = 0;
+//        if(fputs(recvBuff, stdout) == EOF)
+//        {
+//            printf("\n Error : Fputs error\n");
+//        }
+//    }
+//
     if(n < 0)
     {
         printf("\n Read error \n");

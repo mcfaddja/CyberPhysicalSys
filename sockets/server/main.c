@@ -24,7 +24,7 @@
 
 int main(int argc, char *argv[])
 {
-    int listenfd = 0, connfd = 0;
+    int listenfd = 0, connfd = 0, n = 0;
     struct sockaddr_in serv_addr;
 
     char buff[1025];
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 
     listenfd = socket(AF_INET, SOCK_STREAM, 0);
     memset(&serv_addr, '0', sizeof(serv_addr));
-    memset(sendBuff, '0', sizeof(sendBuff));
+    memset(buff, '0', sizeof(buff));
 
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
@@ -65,6 +65,11 @@ int main(int argc, char *argv[])
             buff[n] = 0;
             fputs(buff, stdout);
         }
+	
+//	puts("\n");
+	puts("DONE receiving measurement!\n");
+//	puts("\n");
+//	puts("\n");
 
         close(connfd);
         sleep(1);
