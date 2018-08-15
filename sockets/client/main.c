@@ -21,7 +21,6 @@ typedef struct _imu_datapoint{
     char*   device_id;
     time_t  measurement_time;
     char*   sensor_id;
-    char*   ip_addr;
     float   gx;
     float   gy;
     float   gz;
@@ -37,12 +36,25 @@ typedef struct _imu_datapoint{
 
 int main(int argc, char *argv[])
 {
-    float gx = 0, gy = 0, gz = 0;
-    float ax = 0, ay = 0, az = 0;
-    float mx = 0, my = 0, mz = 0;
+    imu_datapoint* theData = (imu_datapoint*) malloc(sizeof(imu_datapoint));
+
+    theData->device_id = DEVICE_ID;
+    theData->measurement_time = time(NULL);
+    theData->sensor_id = "1";
+    theData->gx = (float) 0.0;
+    theData->gy = (float) 0.0;
+    theData->gz = (float) 0.0;
+    theData->ax = (float) 0.0;
+    theData->ay = (float) 0.0;
+    theData->az = (float) 1.0;
+    theData->mx = (float) 0.0;
+    theData->my = (float) 0.0;
+    theData->mz = (float) 0.0;
+
 
     int sockfd = 0, n = 0;
-    char recvBuff[1024];
+    int buffSize = 1024;
+    char buff[1024];
     struct sockaddr_in serv_addr;
 
     if(argc != 2)
@@ -51,7 +63,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    memset(recvBuff, '0',sizeof(recvBuff));
+    memset(buff, '0',sizeof(buff));
     if((sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0)
     {
         printf("\n Error : Could not create socket \n");
@@ -74,6 +86,45 @@ int main(int argc, char *argv[])
         printf("\n Error : Connect Failed \n");
         return 1;
     }
+
+
+    snprintf(buff, sizeof(buff), "%s\r\n", theData->device_id);
+    write(sockfd, buff, strlen(buff));
+
+    snprintf(buff, sizeof(buff), "%.24s\r\n", ctime(%theData->measurement_time));
+    write(sockfd, buff, strlen(buff));
+
+    snprintf(buff, sizeof(buff), "%s", theData->sensor_id);
+    write(sockfd, buff, strlen(buff));
+
+    snprintf(buff, sizeof(buff), "gx: %f", theData->gx);
+    write(sockfd, buff, strlen(buff));
+
+    snprintf(buff, sizeof(buff), "gy: %f", theData->gy);
+    write(sockfd, buff, strlen(buff));
+
+    snprintf(buff, sizeof(buff), "gz: %f", theData->gz);
+    write(sockfd, buff, strlen(buff));
+
+    snprintf(buff, sizeof(buff), "ax: %f", theData->ax);
+    write(sockfd, buff, strlen(buff));
+
+    snprintf(buff, sizeof(buff), "ay: %f", theData->ay);
+    write(sockfd, buff, strlen(buff));
+
+    snprintf(buff, sizeof(buff), "az: %f", theData->az);
+    write(sockfd, buff, strlen(buff));
+
+    snprintf(buff, sizeof(buff), "mx: %f", theData->mx);
+    write(sockfd, buff, strlen(buff));
+
+    snprintf(buff, sizeof(buff), "my: %f", theData->my);
+    write(sockfd, buff, strlen(buff));
+
+    snprintf(buff, sizeof(buff), "mz: %f", theData->mz);
+    write(sockfd, buff, strlen(buff));
+
+
 
     while ( (n = read(sockfd, recvBuff, sizeof(recvBuff)-1)) > 0)
     {

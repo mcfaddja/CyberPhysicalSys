@@ -10,6 +10,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <stdio.h>
+#include <netdb.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <errno.h>
@@ -26,7 +27,7 @@ int main(int argc, char *argv[])
     int listenfd = 0, connfd = 0;
     struct sockaddr_in serv_addr;
 
-    char sendBuff[1025];
+    char buff[1025];
     time_t ticks;
 
     listenfd = socket(AF_INET, SOCK_STREAM, 0);
@@ -42,14 +43,28 @@ int main(int argc, char *argv[])
     listen(listenfd, 10);
 
 
+//    while(1)
+//    {
+//        connfd = accept(listenfd, (struct sockaddr*)NULL, NULL);
+//
+//        ticks = time(NULL);
+//        snprintf(sendBuff, sizeof(sendBuff), "%.24s\r\n", ctime(&ticks));
+//        write(connfd, sendBuff, strlen(sendBuff));
+//        puts("sent data");
+//
+//        close(connfd);
+//        sleep(1);
+//    }
+
     while(1)
     {
         connfd = accept(listenfd, (struct sockaddr*)NULL, NULL);
 
-        ticks = time(NULL);
-        snprintf(sendBuff, sizeof(sendBuff), "%.24s\r\n", ctime(&ticks));
-        write(connfd, sendBuff, strlen(sendBuff));
-        puts("sent data");
+        while( (n = read(connfd, buff, sizeof(buff)-1)) > 0)
+        {
+            buff[n] = 0;
+            fputs(buff, stdout);
+        }
 
         close(connfd);
         sleep(1);
