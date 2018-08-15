@@ -126,16 +126,6 @@ int main(int argc, char *argv[])
     write(sockfd, buff, strlen(buff));
 
 
-
-//    while ( (n = read(sockfd, recvBuff, siøzeof(recvBuff)-1)) > 0)
-//    {
-//        recvBuff[n] = 0;
-//        if(fputs(recvBuff, stdout) == EOF)
-//        {
-//            printf("\n Error : Fputs error\n");
-//        }
-//    }
-//
     if(n < 0)
     {
         printf("\n Read error \n");

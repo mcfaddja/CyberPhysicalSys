@@ -2,10 +2,6 @@
 // Created by Jonathan McFadden on 8/10/18.
 //
 
-//#include "../shared/error.h"
-//#include "../shared/comm.h"
-//#include "../shared/commands.h"
-//#include "hashmap.h"
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
@@ -30,6 +26,7 @@ int main(int argc, char *argv[])
     char buff[1025];
     time_t ticks;
 
+
     listenfd = socket(AF_INET, SOCK_STREAM, 0);
     memset(&serv_addr, '0', sizeof(serv_addr));
     memset(buff, '0', sizeof(buff));
@@ -38,23 +35,11 @@ int main(int argc, char *argv[])
     serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
     serv_addr.sin_port = htons(5000);
 
+
     bind(listenfd, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
 
     listen(listenfd, 10);
 
-
-//    while(1)
-//    {
-//        connfd = accept(listenfd, (struct sockaddr*)NULL, NULL);
-//
-//        ticks = time(NULL);
-//        snprintf(sendBuff, sizeof(sendBuff), "%.24s\r\n", ctime(&ticks));
-//        write(connfd, sendBuff, strlen(sendBuff));
-//        puts("sent data");
-//
-//        close(connfd);
-//        sleep(1);
-//    }
 
     while(1)
     {
@@ -65,11 +50,8 @@ int main(int argc, char *argv[])
             buff[n] = 0;
             fputs(buff, stdout);
         }
-	
-//	puts("\n");
-	puts("DONE receiving measurement!\n");
-//	puts("\n");
-//	puts("\n");
+
+	    puts("DONE receiving measurement!\n");
 
         close(connfd);
         sleep(1);
