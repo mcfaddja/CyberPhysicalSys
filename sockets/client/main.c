@@ -12,9 +12,35 @@
 #include <unistd.h>
 #include <errno.h>
 #include <arpa/inet.h>
+#include <time.h>
+
+#define DEVICE_ID "SCHOOL_ESP32_A"
+
+
+typedef struct _imu_datapoint{
+    char*   device_id;
+    time_t  measurement_time;
+    char*   sensor_id;
+    char*   ip_addr;
+    float   gx;
+    float   gy;
+    float   gz;
+    float   ax;
+    float   ay;
+    float   az;
+    float   mx;
+    float   my;
+    float   mz;
+} imu_datapoint;
+
+
 
 int main(int argc, char *argv[])
 {
+    float gx = 0, gy = 0, gz = 0;
+    float ax = 0, ay = 0, az = 0;
+    float mx = 0, my = 0, mz = 0;
+
     int sockfd = 0, n = 0;
     char recvBuff[1024];
     struct sockaddr_in serv_addr;
