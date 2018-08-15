@@ -18,6 +18,23 @@
 
 //#define MAX_BUFFER_SIZE 1024
 
+
+typedef struct _imu_datapoint{
+    char*   device_id;
+    time_t  measurement_time;
+    char*   sensor_id;
+    float   gx;
+    float   gy;
+    float   gz;
+    float   ax;
+    float   ay;
+    float   az;
+    float   mx;
+    float   my;
+    float   mz;
+} imu_datapoint;
+
+
 int main(int argc, char *argv[])
 {
     int listenfd = 0, connfd = 0, n = 0;
@@ -26,35 +43,111 @@ int main(int argc, char *argv[])
     char buff[1025];
     time_t ticks;
 
+    imu_datapoint* theData = (imu_datapoint*) malloc(sizeof(imu_datapoint));
 
-    listenfd = socket(AF_INET, SOCK_STREAM, 0);
-    memset(&serv_addr, '0', sizeof(serv_addr));
-    memset(buff, '0', sizeof(buff));
+    FILE *dataFile;
+    char fileBuff[1025];
 
-    serv_addr.sin_family = AF_INET;
-    serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
-    serv_addr.sin_port = htons(5000);
-
-
-    bind(listenfd, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
-
-    listen(listenfd, 10);
-
-
-    while(1)
+    dataFile = fopen("dataFile.txt", "a+");
+    if(dataFile==NLU)
     {
-        connfd = accept(listenfd, (struct sockaddr*)NULL, NULL);
+        puts("ERROR opening file");
+        return 0;
+    }
+    else
+    {
+        puts("File open successful, configuring network stuff");
 
-        while( (n = read(connfd, buff, sizeof(buff)-1)) > 0)
+        listenfd = socket(AF_INET, SOCK_STREAM, 0);
+        memset(&serv_addr, '0', sizeof(serv_addr));
+        memset(buff, '0', sizeof(buff));
+        memset(fileBuff, '0', sizeof(fileBuff));
+
+        serv_addr.sin_family = AF_INET;
+        serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+        serv_addr.sin_port = htons(5000);
+
+
+        puts("Listening on port 5000\n");
+
+        bind(listenfd, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
+
+        listen(listenfd, 10);
+
+
+
+        while(1)
         {
-            buff[n] = 0;
-            fputs(buff, stdout);
+            connfd = accept(listenfd, (struct sockaddr*)NULL, NULL);
+
+            int cnt = 0;
+            while( (n = read(connfd, buff, sizeof(buff)-1)) > 0)
+            {
+                buff[n] = 0;
+                fputs(buff, stdout);
+
+                switch(cnt) {
+                    case 0:
+                        theData->device_id = buff;
+                        break;
+                    case 1:
+                        const char *time_details = buff;
+                        struct tm tm;
+                        strptime(time_details, "%a %m %d %H:%M:%S %Y", tm);
+                        theData->measurement_time = mktime(&tm);
+                        break;
+                    case 2:
+                        theData->sensor_id = buff;
+                        break;
+                    case 3:
+                        theData->gx = atof(buff);
+                        break;
+                    case 4:
+                        theData->gy = atof(buff);
+                        break;
+                    case 5:
+                        theData->gz = atof(buff);
+                        break;
+                    case 6:
+                        theData->ax = atof(buff);
+                        break;
+                    case 7:
+                        theData->ay = atof(buff);
+                        break;
+                    case 8:
+                        theData->az = atof(buff);
+                        break;
+                    case 9:
+                        theData->mx = atof(buff);
+                        break;
+                    case 10:
+                        theData->my = atof(buff);
+                        break;
+                    case 11:
+                        theData->mz = atof(buff);
+                        break;
+                }
+
+                cnt++;
+                if(cnt==12) {
+                    cnt=0;
+
+                    fseek(dataFile, 0, SEEK_END);
+                    fileBuff =
+                    fprintf(dataFile. )
+                }
+
+            }
+
+            puts("DONE receiving measurement!\n");
+
+            close(connfd);
+            sleep(1);
         }
 
-	    puts("DONE receiving measurement!\n");
-
-        close(connfd);
-        sleep(1);
     }
+
+
+
 }
 
