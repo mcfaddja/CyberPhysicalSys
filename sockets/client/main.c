@@ -55,7 +55,10 @@ int main(int argc, char *argv[])
     int sockfd = 0, n = 0;
     int buffSize = 2048;
     char buff[buffSize];
-    buff[0] = NULL;
+//    buff[0] = "\n";
+//    buff[1] = "{";
+//    buff[2]= "\r";
+//    buff[3] = "\n";
     char miniBuff[512];
     struct sockaddr_in serv_addr;
 
@@ -65,6 +68,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    memset(buff, '\n', 1);
 //    memset(buff, '0',sizeof(buff));
 //    memset(miniBuff, '0', sizeof(miniBuff));
     if((sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0)
@@ -91,61 +95,65 @@ int main(int argc, char *argv[])
     }
 
 
+    strcat(buff, "{\r\n");
 
-
-    snprintf(miniBuff, sizeof(miniBuff), "%s\r\n", theData->device_id);
+    snprintf(miniBuff, sizeof(miniBuff), "\t\"Device ID\" : \"%s\"\r\n", theData->device_id);
     strcat(buff, miniBuff);
-    fprintf(stdout, buff);
-    puts("device id DONE\n");
+//    fprintf(stdout, buff);
+//    puts("device id DONE\n");
 
 
     time_t ticks = theData->measurement_time;
-    snprintf(miniBuff, sizeof(miniBuff), "%.24s\r\n", ctime(&ticks));
+    snprintf(miniBuff, sizeof(miniBuff), "\t\"Time\" : \"%.24s\"\r\n", ctime(&ticks));
     strcat(buff, miniBuff);
+//    fprintf(stdout, buff);
+//    puts("time stamp DONE\n");
+
+    snprintf(miniBuff, sizeof(miniBuff), "\t\"Sensor ID\" : \"%s\"\r\n", theData->sensor_id);
+    strcat(buff, miniBuff);
+//    fprintf(stdout, buff);
+//    puts("sensor id DONE\n");
+
+    snprintf(miniBuff, sizeof(miniBuff), "\t\"gx\" : %f10\r\n", theData->gx);
+    strcat(buff, miniBuff);
+//    puts("gx DONE\n");
+
+    snprintf(miniBuff, sizeof(miniBuff), "\t\"gy\" : %f10\r\n", theData->gy);
+    strcat(buff, miniBuff);
+//    puts("gy DONE\n");
+
+    snprintf(miniBuff, sizeof(miniBuff), "\t\"gz\" : %f10\r\n", theData->gz);
+    strcat(buff, miniBuff);
+//    puts("gz DONE\n");
+
+    snprintf(miniBuff, sizeof(miniBuff), "\t\"ax\" : %f10\r\n", theData->ax);
+    strcat(buff, miniBuff);
+//    puts("ax DONE\n");
+
+    snprintf(miniBuff, sizeof(miniBuff), "\t\"ay\" : %f10\r\n", theData->ay);
+    strcat(buff, miniBuff);
+//    puts("ay DONE\n");
+
+    snprintf(miniBuff, sizeof(miniBuff), "\t\"az\" : %f10\r\n", theData->az);
+    strcat(buff, miniBuff);
+//    puts("az DONE\n");
+
+    snprintf(miniBuff, sizeof(miniBuff), "\t\"mx\" : %f10\r\n", theData->mx);
+    strcat(buff, miniBuff);
+//    puts("mx DONE\n");
+
+    snprintf(miniBuff, sizeof(miniBuff), "\t\"my\" : %f10\r\n", theData->my);
+    strcat(buff, miniBuff);
+//    puts("my DONE\n");
+
+    snprintf(miniBuff, sizeof(miniBuff), "\t\"mz\" : %f10\r\n", theData->mz);
+    strcat(buff, miniBuff);
+//    puts("mz DONE\n");
+
+    snprintf(miniBuff, sizeof(miniBuff), "}\n");
+    strcat(buff, miniBuff);
+
     fprintf(stdout, buff);
-    puts("time stamp DONE\n");
-
-    snprintf(miniBuff, sizeof(miniBuff), "%s\r\n", theData->sensor_id);
-    strcat(buff, miniBuff);
-    fprintf(stdout, buff);
-    puts("sensor id DONE\n");
-
-    snprintf(miniBuff, sizeof(miniBuff), "gx: %f10\r\n", theData->gx);
-    strcat(buff, miniBuff);
-    puts("gx DONE\n");
-
-    snprintf(miniBuff, sizeof(miniBuff), "gy: %f10\r\n", theData->gy);
-    strcat(buff, miniBuff);
-    puts("gy DONE\n");
-
-    snprintf(miniBuff, sizeof(miniBuff), "gz: %f10\r\n", theData->gz);
-    strcat(buff, miniBuff);
-    puts("gz DONE\n");
-
-    snprintf(miniBuff, sizeof(miniBuff), "ax: %f10\r\n", theData->ax);
-    strcat(buff, miniBuff);
-    puts("ax DONE\n");
-
-    snprintf(miniBuff, sizeof(miniBuff), "ay: %f10\r\n", theData->ay);
-    strcat(buff, miniBuff);
-    puts("ay DONE\n");
-
-    snprintf(miniBuff, sizeof(miniBuff), "az: %f10\r\n", theData->az);
-    strcat(buff, miniBuff);
-    puts("az DONE\n");
-
-    snprintf(miniBuff, sizeof(miniBuff), "mx: %f10\r\n", theData->mx);
-    strcat(buff, miniBuff);
-    puts("mx DONE\n");
-
-    snprintf(miniBuff, sizeof(miniBuff), "my: %f10\r\n", theData->my);
-    strcat(buff, miniBuff);
-    puts("my DONE\n");
-
-    snprintf(miniBuff, sizeof(miniBuff), "mz: %f10\r\n", theData->mz);
-    strcat(buff, miniBuff);
-    puts("mz DONE\n");
-
     fprintf(stdout, buff);
     //    write(sockfd, buff, strlen(buff));
 
