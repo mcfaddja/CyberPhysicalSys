@@ -51,13 +51,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="c" value="3722" />
+          <entry key="c" value="3723" />
           <entry key="txt" value="50" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="3722" />
+          <entry key="ObjectiveC" value="3723" />
           <entry key="PLAIN_TEXT" value="50" />
         </counts>
       </usages-collector>
@@ -120,8 +120,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/sockets/client/main.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="533">
-                  <caret line="156" column="26" selection-start-line="156" selection-start-column="26" selection-end-line="156" selection-end-column="26" />
+                <state relative-caret-position="499">
+                  <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
                 </state>
               </provider>
             </entry>
@@ -1176,7 +1176,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21882000" />
+    <option name="totallyTimeSpent" value="22047000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="22" width="1517" height="940" extended-state="0" />
@@ -1254,8 +1254,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sockets/client/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="156" column="26" selection-start-line="156" selection-start-column="26" selection-end-line="156" selection-end-column="26" />
+        <state relative-caret-position="499">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
         </state>
       </provider>
     </entry>
