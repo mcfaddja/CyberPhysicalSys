@@ -135,9 +135,6 @@ int main(int argc, char *argv[])
 
 //    fprintf(stdout, buff);
 //    fprintf(stdout, buff);
-    int myLen = 0;
-    myLen = strlen(buff);
-    fprintf(stdout, "the length is %d\r\n", myLen);
     write(sockfd, buff, strlen(buff));
 
 
@@ -148,4 +145,3 @@ int main(int argc, char *argv[])
 
     return 0;
 }
-

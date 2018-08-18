@@ -51,10 +51,10 @@ int main(int argc, char *argv[])
 
     listenfd = socket(AF_INET, SOCK_STREAM, 0);
     memset(&serv_addr, '0', sizeof(serv_addr));
-//    memset(buff, ' ', sizeof(buff));
-//    memset(fileBuff, ' ', sizeof(fileBuff));
-//    memset(buff, '\n', 1);
-//    memset(fileBuff, '\n', 1);
+    memset(buff, ' ', sizeof(buff));
+    memset(fileBuff, ' ', sizeof(fileBuff));
+    memset(buff, '\n', 1);
+    memset(fileBuff, '\n', 1);
 
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
@@ -77,9 +77,6 @@ int main(int argc, char *argv[])
         while( (n = read(connfd, buff, sizeof(buff)-1)) > 0)
         {
 //            fileBuff = buff;
-	    int myLen = 0;
-            myLen = strlen(buff);
-	    fprintf(stdout, "the buffer length is : %d\r\n", myLen);
             strcpy(fileBuff, buff);
             fprintf(stdout, buff);
         }
@@ -107,5 +104,4 @@ int main(int argc, char *argv[])
 
 
 }
-
 
