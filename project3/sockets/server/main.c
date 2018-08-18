@@ -18,27 +18,23 @@ int main(int argc, char *argv[])
 
     int port = 5000;
 
-    int server_fd, client_fd, err;
-    struct sockaddr_in server, client;
+    int listenfd = 0, connfd = 0, n = 0;
+    struct sockaddr_in serv_addr;
     char buff[BUFFER_SIZE];
 
-    server_fd = socket(AF_INET, SOCK_STREAM, 0);
-    if (server_fd < 0) on_error("Could not create socket\n");
+    listenfd = socket(AF_INET, SOCK_STREAM, 0);
+    memset(&serv_addr, '0', sizeof(serv_addr));
 
-    server.sin_family = AF_INET;
-    server.sin_port = htons(port);
-    server.sin_addr.s_addr = htonl(INADDR_ANY);
+    serv_addr.sin_family = AF_INET;
+    serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+    serv_addr.sin_port = htons(5000);
 
-    int opt_val = 1;
-    setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, &opt_val, sizeof opt_val);
 
-    err = bind(server_fd, (struct sockaddr *) &server, sizeof(server));
-    if (err < 0) on_error("Could not bind socket\n");
+    puts("Listening on port 5000\n");
 
-    err = listen(server_fd, 128);
-    if (err < 0) on_error("Could not listen on socket\n");
+    bind(listenfd, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
 
-    printf("Server is listening on %d\n", port);
+    listen(listenfd, 10);
 
 
     time(&timer);
@@ -47,21 +43,21 @@ int main(int argc, char *argv[])
     strftime(buffer, 26, "%Y-%m-%d %H:%M:%S", tm_info);
     puts(buffer);
 
-    while (1) {
-        socklen_t client_len = sizeof(client);
-        client_fd = accept(server_fd, (struct sockaddr *) &client, &client_len);
 
-        if (client_fd < 0) on_error("Could not establish new connection\n");
+    while(1)
+    {
+        connfd = accept(listenfd, (struct sockaddr *) NULL, NULL);
 
-        while (1) {
-            int read = recv(client_fd, buff, BUFFER_SIZE, 0);
-
-            if (!read) break; // done reading
-            if (read < 0) on_error("Client read failed\n");
-
-            err = send(client_fd, buff, read, 0);
-            if (err < 0) on_error("Client write failed\n");
+        while ((n = read(connfd, buff, sizeof(buff) - 1)) > 0)
+        {
+            fprintf(stdout, buff);
         }
+
+        puts("\n connection done!!! \n \n");
+
+        close(connfd);
+        sleep(1);
+
     }
 
 
