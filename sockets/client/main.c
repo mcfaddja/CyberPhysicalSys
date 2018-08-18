@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 {
     imu_datapoint* theData = (imu_datapoint*) malloc(sizeof(imu_datapoint));
 
-    theData->device_id = DEVICE_ID;
+    theData->device_id = "SCHOOL_ESP32_A";
     theData->measurement_time = time(NULL);
     theData->sensor_id = "1";
     theData->gx = (float) 0.0;
@@ -53,8 +53,10 @@ int main(int argc, char *argv[])
 
 
     int sockfd = 0, n = 0;
-    int buffSize = 1024;
-    char buff[1024];
+    int buffSize = 2048;
+    char buff[buffSize];
+    buff[0] = NULL;
+    char miniBuff[512];
     struct sockaddr_in serv_addr;
 
     if(argc != 2)
@@ -63,7 +65,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    memset(buff, '0',sizeof(buff));
+//    memset(buff, '0',sizeof(buff));
+//    memset(miniBuff, '0', sizeof(miniBuff));
     if((sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0)
     {
         printf("\n Error : Could not create socket \n");
@@ -88,42 +91,63 @@ int main(int argc, char *argv[])
     }
 
 
-    snprintf(buff, sizeof(buff), "%s\r\n", theData->device_id);
-    write(sockfd, buff, strlen(buff));
+
+
+    snprintf(miniBuff, sizeof(miniBuff), "%s\r\n", theData->device_id);
+    strcat(buff, miniBuff);
+    fprintf(stdout, buff);
+    puts("device id DONE\n");
+
 
     time_t ticks = theData->measurement_time;
-    snprintf(buff, sizeof(buff), "%.24s\r\n", ctime(&ticks));
-    write(sockfd, buff, strlen(buff));
+    snprintf(miniBuff, sizeof(miniBuff), "%.24s\r\n", ctime(&ticks));
+    strcat(buff, miniBuff);
+    fprintf(stdout, buff);
+    puts("time stamp DONE\n");
 
-    snprintf(buff, sizeof(buff), "%s\r\n", theData->sensor_id);
-    write(sockfd, buff, strlen(buff));
+    snprintf(miniBuff, sizeof(miniBuff), "%s\r\n", theData->sensor_id);
+    strcat(buff, miniBuff);
+    fprintf(stdout, buff);
+    puts("sensor id DONE\n");
 
-    snprintf(buff, sizeof(buff), "gx: %f\r\n", theData->gx);
-    write(sockfd, buff, strlen(buff));
+    snprintf(miniBuff, sizeof(miniBuff), "gx: %f10\r\n", theData->gx);
+    strcat(buff, miniBuff);
+    puts("gx DONE\n");
 
-    snprintf(buff, sizeof(buff), "gy: %f\r\n", theData->gy);
-    write(sockfd, buff, strlen(buff));
+    snprintf(miniBuff, sizeof(miniBuff), "gy: %f10\r\n", theData->gy);
+    strcat(buff, miniBuff);
+    puts("gy DONE\n");
 
-    snprintf(buff, sizeof(buff), "gz: %f\r\n", theData->gz);
-    write(sockfd, buff, strlen(buff));
+    snprintf(miniBuff, sizeof(miniBuff), "gz: %f10\r\n", theData->gz);
+    strcat(buff, miniBuff);
+    puts("gz DONE\n");
 
-    snprintf(buff, sizeof(buff), "ax: %f\r\n", theData->ax);
-    write(sockfd, buff, strlen(buff));
+    snprintf(miniBuff, sizeof(miniBuff), "ax: %f10\r\n", theData->ax);
+    strcat(buff, miniBuff);
+    puts("ax DONE\n");
 
-    snprintf(buff, sizeof(buff), "ay: %f\r\n", theData->ay);
-    write(sockfd, buff, strlen(buff));
+    snprintf(miniBuff, sizeof(miniBuff), "ay: %f10\r\n", theData->ay);
+    strcat(buff, miniBuff);
+    puts("ay DONE\n");
 
-    snprintf(buff, sizeof(buff), "az: %f\r\n", theData->az);
-    write(sockfd, buff, strlen(buff));
+    snprintf(miniBuff, sizeof(miniBuff), "az: %f10\r\n", theData->az);
+    strcat(buff, miniBuff);
+    puts("az DONE\n");
 
-    snprintf(buff, sizeof(buff), "mx: %f\r\n", theData->mx);
-    write(sockfd, buff, strlen(buff));
+    snprintf(miniBuff, sizeof(miniBuff), "mx: %f10\r\n", theData->mx);
+    strcat(buff, miniBuff);
+    puts("mx DONE\n");
 
-    snprintf(buff, sizeof(buff), "my: %f\r\n", theData->my);
-    write(sockfd, buff, strlen(buff));
+    snprintf(miniBuff, sizeof(miniBuff), "my: %f10\r\n", theData->my);
+    strcat(buff, miniBuff);
+    puts("my DONE\n");
 
-    snprintf(buff, sizeof(buff), "mz: %f\r\n", theData->mz);
-    write(sockfd, buff, strlen(buff));
+    snprintf(miniBuff, sizeof(miniBuff), "mz: %f10\r\n", theData->mz);
+    strcat(buff, miniBuff);
+    puts("mz DONE\n");
+
+    fprintf(stdout, buff);
+    //    write(sockfd, buff, strlen(buff));
 
 
     if(n < 0)
