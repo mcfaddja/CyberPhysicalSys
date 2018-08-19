@@ -31,7 +31,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="f2ba6b1b-65ed-4974-9388-01fb8741a1c8" name="Default" comment="finished initial sockets client" />
+=======
+    <list default="true" id="f2ba6b1b-65ed-4974-9388-01fb8741a1c8" name="Default" comment="finished initial sockets client">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sockets/client/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/sockets/client/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sockets/server/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/sockets/server/main.c" afterDir="false" />
+    </list>
+>>>>>>> sockets2
     <ignored path="$PROJECT_DIR$/sockets/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,37 +51,65 @@
     <session id="603408911">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+<<<<<<< HEAD
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.opened" value="1" />
+=======
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.47" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="3" />
+>>>>>>> sockets2
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="c" value="3991" />
+=======
+          <entry key="c" value="287" />
+>>>>>>> sockets2
           <entry key="txt" value="50" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="ObjectiveC" value="3991" />
+=======
+          <entry key="ObjectiveC" value="287" />
+>>>>>>> sockets2
           <entry key="PLAIN_TEXT" value="50" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+<<<<<<< HEAD
           <entry key="c" value="9" />
+=======
+          <entry key="c" value="7" />
+>>>>>>> sockets2
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+<<<<<<< HEAD
           <entry key="ObjectiveC" value="9" />
+=======
+          <entry key="ObjectiveC" value="7" />
+>>>>>>> sockets2
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <splitter split-orientation="horizontal" split-proportion="0.44199347">
+=======
+    <splitter split-orientation="horizontal" split-proportion="0.48856208">
+>>>>>>> sockets2
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -85,11 +121,19 @@
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sockets/server/main.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-591">
                   <caret line="14" selection-start-line="14" selection-end-line="14" />
+=======
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/sockets/server/main.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="320">
+                  <caret line="37" column="52" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
+>>>>>>> sockets2
                 </state>
               </provider>
             </entry>
@@ -103,10 +147,17 @@
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/sockets/client/main.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-310">
+=======
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sockets/client/main.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+>>>>>>> sockets2
                   <caret line="4" selection-start-line="4" selection-end-line="4" />
                 </state>
               </provider>
@@ -116,6 +167,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sockets/client/main.c">
               <provider selected="true" editor-type-id="text-editor">
@@ -130,6 +182,13 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="248">
                   <caret line="31" selection-start-line="31" selection-end-line="31" />
+=======
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/sockets/client/main.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="303">
+                  <caret line="21" selection-start-line="21" selection-end-line="21" />
+>>>>>>> sockets2
                 </state>
               </provider>
             </entry>
@@ -144,6 +203,7 @@
         <option value="CMakeLists.txt" />
       </list>
     </option>
+<<<<<<< HEAD
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -157,6 +217,8 @@
       <replace>%f10.7\</replace>
       <replace>miniBuff</replace>
     </replaceStrings>
+=======
+>>>>>>> sockets2
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -169,7 +231,10 @@
         <option value="$PROJECT_DIR$/sockets/server/server-sockets.c" />
         <option value="$PROJECT_DIR$/sockets/client/main.c" />
         <option value="$PROJECT_DIR$/sockets/server/main.c" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/sockets/main.c" />
+=======
+>>>>>>> sockets2
       </list>
     </option>
   </component>
@@ -180,7 +245,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="58" />
+=======
+    <option name="x" value="452" />
+>>>>>>> sockets2
     <option name="y" value="22" />
     <option name="width" value="1517" />
     <option name="height" value="940" />
@@ -191,6 +260,7 @@
         <observation name="false" value="12.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="false" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -198,6 +268,12 @@
       </dailyData>
       <dailyData date="18-08-2018">
         <observation name="false" value="36.0" />
+=======
+        <observation name="false" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="false" value="7.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="binaryFeature:liftShorterClasses">
@@ -205,6 +281,7 @@
         <observation name="UNDEFINED" value="12.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -212,6 +289,12 @@
       </dailyData>
       <dailyData date="18-08-2018">
         <observation name="UNDEFINED" value="36.0" />
+=======
+        <observation name="UNDEFINED" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="7.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="binaryFeature:middleMatching">
@@ -219,6 +302,7 @@
         <observation name="false" value="12.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="false" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -226,6 +310,12 @@
       </dailyData>
       <dailyData date="18-08-2018">
         <observation name="false" value="36.0" />
+=======
+        <observation name="false" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="false" value="7.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="binaryFeature:nonGeneric">
@@ -233,6 +323,7 @@
         <observation name="UNDEFINED" value="12.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -240,6 +331,12 @@
       </dailyData>
       <dailyData date="18-08-2018">
         <observation name="UNDEFINED" value="36.0" />
+=======
+        <observation name="UNDEFINED" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="7.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="binaryFeature:prox_inResolveScope">
@@ -248,6 +345,7 @@
         <observation name="false" value="4.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -257,6 +355,14 @@
       <dailyData date="18-08-2018">
         <observation name="UNDEFINED" value="7.0" />
         <observation name="false" value="29.0" />
+=======
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="false" value="2.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="false" value="5.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="binaryFeature:prox_openedInEditor">
@@ -265,6 +371,7 @@
         <observation name="true" value="4.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -274,6 +381,14 @@
       <dailyData date="18-08-2018">
         <observation name="UNDEFINED" value="7.0" />
         <observation name="true" value="29.0" />
+=======
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="true" value="2.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="true" value="5.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="binaryFeature:prox_sameDirectory">
@@ -282,6 +397,7 @@
         <observation name="true" value="4.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -291,6 +407,14 @@
       <dailyData date="18-08-2018">
         <observation name="UNDEFINED" value="7.0" />
         <observation name="true" value="29.0" />
+=======
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="true" value="2.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="true" value="5.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="binaryFeature:prox_sameLogicalRoot">
@@ -299,6 +423,7 @@
         <observation name="false" value="4.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -308,6 +433,14 @@
       <dailyData date="18-08-2018">
         <observation name="UNDEFINED" value="7.0" />
         <observation name="false" value="29.0" />
+=======
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="false" value="2.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="false" value="5.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="binaryFeature:prox_sdkOrLibrary">
@@ -316,6 +449,7 @@
         <observation name="false" value="4.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -325,6 +459,14 @@
       <dailyData date="18-08-2018">
         <observation name="UNDEFINED" value="7.0" />
         <observation name="false" value="29.0" />
+=======
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="false" value="2.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="false" value="5.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="binaryFeature:templates">
@@ -332,6 +474,7 @@
         <observation name="false" value="12.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="false" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -339,6 +482,12 @@
       </dailyData>
       <dailyData date="18-08-2018">
         <observation name="false" value="36.0" />
+=======
+        <observation name="false" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="false" value="7.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="categoricalFeature:accessible">
@@ -346,6 +495,7 @@
         <observation name="UNDEFINED" value="12.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -353,6 +503,12 @@
       </dailyData>
       <dailyData date="18-08-2018">
         <observation name="UNDEFINED" value="36.0" />
+=======
+        <observation name="UNDEFINED" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="7.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="categoricalFeature:expectedType">
@@ -360,6 +516,7 @@
         <observation name="UNDEFINED" value="12.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -367,6 +524,12 @@
       </dailyData>
       <dailyData date="18-08-2018">
         <observation name="UNDEFINED" value="36.0" />
+=======
+        <observation name="UNDEFINED" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="7.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="categoricalFeature:kind">
@@ -374,6 +537,7 @@
         <observation name="UNDEFINED" value="12.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -381,6 +545,12 @@
       </dailyData>
       <dailyData date="18-08-2018">
         <observation name="UNDEFINED" value="36.0" />
+=======
+        <observation name="UNDEFINED" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="7.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="categoricalFeature:prox_groovyReferenceListWeigher">
@@ -388,6 +558,7 @@
         <observation name="UNDEFINED" value="12.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -395,6 +566,12 @@
       </dailyData>
       <dailyData date="18-08-2018">
         <observation name="UNDEFINED" value="36.0" />
+=======
+        <observation name="UNDEFINED" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="7.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="categoricalFeature:prox_javaInheritance">
@@ -403,6 +580,7 @@
         <observation name="null" value="4.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -412,6 +590,13 @@
       <dailyData date="18-08-2018">
         <observation name="UNDEFINED" value="7.0" />
         <observation name="null" value="29.0" />
+=======
+        <observation name="UNDEFINED" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="null" value="5.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="categoricalFeature:prox_referenceList">
@@ -420,6 +605,7 @@
         <observation name="unknown" value="4.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -429,6 +615,13 @@
       <dailyData date="18-08-2018">
         <observation name="UNDEFINED" value="7.0" />
         <observation name="unknown" value="29.0" />
+=======
+        <observation name="UNDEFINED" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="unknown" value="5.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="categoricalFeature:recursion">
@@ -436,6 +629,7 @@
         <observation name="UNDEFINED" value="12.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -443,6 +637,12 @@
       </dailyData>
       <dailyData date="18-08-2018">
         <observation name="UNDEFINED" value="36.0" />
+=======
+        <observation name="UNDEFINED" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="7.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="completionFinishedType">
@@ -452,6 +652,7 @@
         <observation name="typedSelect" value="6.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="cancelled" value="43.0" />
         <observation name="typedSelect" value="3.0" />
       </dailyData>
@@ -464,6 +665,15 @@
         <observation name="cancelled" value="372.0" />
         <observation name="explicitSelect" value="15.0" />
         <observation name="typedSelect" value="21.0" />
+=======
+        <observation name="cancelled" value="47.0" />
+        <observation name="typedSelect" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="cancelled" value="64.0" />
+        <observation name="explicitSelect" value="3.0" />
+        <observation name="typedSelect" value="4.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="completionType">
@@ -471,6 +681,7 @@
         <observation name="BASIC" value="20.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="BASIC" value="6.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -478,6 +689,12 @@
       </dailyData>
       <dailyData date="18-08-2018">
         <observation name="BASIC" value="83.0" />
+=======
+        <observation name="BASIC" value="9.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="BASIC" value="9.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="completionUsage">
@@ -485,6 +702,7 @@
         <observation name="count" value="199.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="count" value="46.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -492,6 +710,12 @@
       </dailyData>
       <dailyData date="18-08-2018">
         <observation name="count" value="408.0" />
+=======
+        <observation name="count" value="53.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="count" value="71.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="doubleFeature:explicitProximity">
@@ -504,13 +728,18 @@
       </dailyData>
       <dailyData date="12-08-2018">
         <observation name="average" value="0.0" />
+<<<<<<< HEAD
         <observation name="count" value="5.0" />
+=======
+        <observation name="count" value="11.0" />
+>>>>>>> sockets2
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
       </dailyData>
       <dailyData date="14-08-2018">
         <observation name="average" value="0.0" />
+<<<<<<< HEAD
         <observation name="count" value="433.0" />
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
@@ -519,6 +748,9 @@
       <dailyData date="18-08-2018">
         <observation name="average" value="0.0" />
         <observation name="count" value="71.0" />
+=======
+        <observation name="count" value="13.0" />
+>>>>>>> sockets2
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
@@ -534,13 +766,18 @@
       </dailyData>
       <dailyData date="12-08-2018">
         <observation name="average" value="0.0" />
+<<<<<<< HEAD
         <observation name="count" value="5.0" />
+=======
+        <observation name="count" value="11.0" />
+>>>>>>> sockets2
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
       </dailyData>
       <dailyData date="14-08-2018">
         <observation name="average" value="0.0" />
+<<<<<<< HEAD
         <observation name="count" value="433.0" />
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
@@ -549,6 +786,9 @@
       <dailyData date="18-08-2018">
         <observation name="average" value="0.0" />
         <observation name="count" value="71.0" />
+=======
+        <observation name="count" value="13.0" />
+>>>>>>> sockets2
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
@@ -559,6 +799,7 @@
         <observation name="UNDEFINED" value="12.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -566,6 +807,12 @@
       </dailyData>
       <dailyData date="18-08-2018">
         <observation name="UNDEFINED" value="36.0" />
+=======
+        <observation name="UNDEFINED" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="7.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="doubleFeature:nameEnd">
@@ -573,6 +820,7 @@
         <observation name="UNDEFINED" value="12.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -580,6 +828,12 @@
       </dailyData>
       <dailyData date="18-08-2018">
         <observation name="UNDEFINED" value="36.0" />
+=======
+        <observation name="UNDEFINED" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="7.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="doubleFeature:position">
@@ -592,12 +846,17 @@
       </dailyData>
       <dailyData date="12-08-2018">
         <observation name="average" value="0.0" />
+<<<<<<< HEAD
         <observation name="count" value="5.0" />
+=======
+        <observation name="count" value="11.0" />
+>>>>>>> sockets2
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
       </dailyData>
       <dailyData date="14-08-2018">
+<<<<<<< HEAD
         <observation name="average" value="0.004619" />
         <observation name="count" value="433.0" />
         <observation name="max" value="1.0" />
@@ -607,6 +866,10 @@
       <dailyData date="18-08-2018">
         <observation name="average" value="0.0" />
         <observation name="count" value="71.0" />
+=======
+        <observation name="average" value="0.0" />
+        <observation name="count" value="13.0" />
+>>>>>>> sockets2
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
@@ -622,6 +885,7 @@
       </dailyData>
       <dailyData date="12-08-2018">
         <observation name="average" value="-1153.0" />
+<<<<<<< HEAD
         <observation name="count" value="5.0" />
         <observation name="max" value="-1153.0" />
         <observation name="min" value="-1153.0" />
@@ -640,6 +904,19 @@
         <observation name="max" value="-1151.0" />
         <observation name="min" value="-1203.0" />
         <observation name="variance" value="139.087327" />
+=======
+        <observation name="count" value="11.0" />
+        <observation name="max" value="-1153.0" />
+        <observation name="min" value="-1153.0" />
+        <observation name="variance" value="-0.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="average" value="-1152.538462" />
+        <observation name="count" value="13.0" />
+        <observation name="max" value="-1152.0" />
+        <observation name="min" value="-1153.0" />
+        <observation name="variance" value="0.133337" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="doubleFeature:priority">
@@ -651,6 +928,7 @@
         <observation name="variance" value="2854.219958" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="average" value="54.0" />
         <observation name="count" value="5.0" />
         <observation name="max" value="150.0" />
@@ -670,6 +948,20 @@
         <observation name="max" value="150.0" />
         <observation name="min" value="-10.0" />
         <observation name="variance" value="1447.171982" />
+=======
+        <observation name="average" value="22.727273" />
+        <observation name="count" value="11.0" />
+        <observation name="max" value="150.0" />
+        <observation name="min" value="-10.0" />
+        <observation name="variance" value="1911.536536" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="average" value="-3.076923" />
+        <observation name="count" value="13.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="-10.0" />
+        <observation name="variance" value="11.660959" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="doubleFeature:prox_explicitlyImported">
@@ -682,6 +974,7 @@
         <observation name="variance" value="0.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -696,6 +989,14 @@
         <observation name="UNDEFINED" value="7.0" />
         <observation name="average" value="300.0" />
         <observation name="count" value="57.0" />
+=======
+        <observation name="UNDEFINED" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="average" value="300.0" />
+        <observation name="count" value="9.0" />
+>>>>>>> sockets2
         <observation name="max" value="300.0" />
         <observation name="min" value="300.0" />
         <observation name="variance" value="0.0" />
@@ -711,6 +1012,7 @@
         <observation name="variance" value="0.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -725,6 +1027,14 @@
         <observation name="UNDEFINED" value="7.0" />
         <observation name="average" value="0.0" />
         <observation name="count" value="57.0" />
+=======
+        <observation name="UNDEFINED" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="9.0" />
+>>>>>>> sockets2
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
@@ -740,20 +1050,33 @@
         <observation name="variance" value="0.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
         <observation name="UNDEFINED" value="70.0" />
         <observation name="average" value="2.0" />
         <observation name="count" value="293.0" />
+=======
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="average" value="2.0" />
+        <observation name="count" value="3.0" />
+>>>>>>> sockets2
         <observation name="max" value="2.0" />
         <observation name="min" value="2.0" />
         <observation name="variance" value="0.0" />
       </dailyData>
+<<<<<<< HEAD
       <dailyData date="18-08-2018">
         <observation name="UNDEFINED" value="7.0" />
         <observation name="average" value="2.0" />
         <observation name="count" value="57.0" />
+=======
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="average" value="2.0" />
+        <observation name="count" value="9.0" />
+>>>>>>> sockets2
         <observation name="max" value="2.0" />
         <observation name="min" value="2.0" />
         <observation name="variance" value="0.0" />
@@ -769,6 +1092,7 @@
         <observation name="variance" value="0.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -783,6 +1107,14 @@
         <observation name="UNDEFINED" value="7.0" />
         <observation name="average" value="0.0" />
         <observation name="count" value="57.0" />
+=======
+        <observation name="UNDEFINED" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="9.0" />
+>>>>>>> sockets2
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
@@ -798,13 +1130,18 @@
       </dailyData>
       <dailyData date="12-08-2018">
         <observation name="average" value="0.0" />
+<<<<<<< HEAD
         <observation name="count" value="5.0" />
+=======
+        <observation name="count" value="11.0" />
+>>>>>>> sockets2
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
       </dailyData>
       <dailyData date="14-08-2018">
         <observation name="average" value="0.0" />
+<<<<<<< HEAD
         <observation name="count" value="433.0" />
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
@@ -813,6 +1150,9 @@
       <dailyData date="18-08-2018">
         <observation name="average" value="0.0" />
         <observation name="count" value="71.0" />
+=======
+        <observation name="count" value="13.0" />
+>>>>>>> sockets2
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
@@ -827,6 +1167,7 @@
         <observation name="variance" value="3.758054" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="average" value="3.6" />
         <observation name="count" value="5.0" />
         <observation name="max" value="4.0" />
@@ -846,6 +1187,20 @@
         <observation name="max" value="8.0" />
         <observation name="min" value="1.0" />
         <observation name="variance" value="4.144577" />
+=======
+        <observation name="average" value="3.454545" />
+        <observation name="count" value="11.0" />
+        <observation name="max" value="4.0" />
+        <observation name="min" value="2.0" />
+        <observation name="variance" value="0.301256" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="average" value="5.461538" />
+        <observation name="count" value="13.0" />
+        <observation name="max" value="8.0" />
+        <observation name="min" value="3.0" />
+        <observation name="variance" value="2.386379" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="doubleFeature:sameWords">
@@ -853,6 +1208,7 @@
         <observation name="UNDEFINED" value="12.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -860,6 +1216,12 @@
       </dailyData>
       <dailyData date="18-08-2018">
         <observation name="UNDEFINED" value="36.0" />
+=======
+        <observation name="UNDEFINED" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="7.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="doubleFeature:shorter">
@@ -867,6 +1229,7 @@
         <observation name="UNDEFINED" value="12.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -874,6 +1237,12 @@
       </dailyData>
       <dailyData date="18-08-2018">
         <observation name="UNDEFINED" value="36.0" />
+=======
+        <observation name="UNDEFINED" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="7.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="doubleFeature:simple">
@@ -881,6 +1250,7 @@
         <observation name="UNDEFINED" value="12.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -888,6 +1258,12 @@
       </dailyData>
       <dailyData date="18-08-2018">
         <observation name="UNDEFINED" value="36.0" />
+=======
+        <observation name="UNDEFINED" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="7.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="doubleFeature:sorter">
@@ -900,13 +1276,18 @@
       </dailyData>
       <dailyData date="12-08-2018">
         <observation name="average" value="1.0" />
+<<<<<<< HEAD
         <observation name="count" value="5.0" />
+=======
+        <observation name="count" value="11.0" />
+>>>>>>> sockets2
         <observation name="max" value="1.0" />
         <observation name="min" value="1.0" />
         <observation name="variance" value="0.0" />
       </dailyData>
       <dailyData date="14-08-2018">
         <observation name="average" value="1.0" />
+<<<<<<< HEAD
         <observation name="count" value="433.0" />
         <observation name="max" value="1.0" />
         <observation name="min" value="1.0" />
@@ -915,6 +1296,9 @@
       <dailyData date="18-08-2018">
         <observation name="average" value="1.0" />
         <observation name="count" value="71.0" />
+=======
+        <observation name="count" value="13.0" />
+>>>>>>> sockets2
         <observation name="max" value="1.0" />
         <observation name="min" value="1.0" />
         <observation name="variance" value="0.0" />
@@ -925,6 +1309,7 @@
         <observation name="UNDEFINED" value="12.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="UNDEFINED" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
@@ -932,6 +1317,12 @@
       </dailyData>
       <dailyData date="18-08-2018">
         <observation name="UNDEFINED" value="36.0" />
+=======
+        <observation name="UNDEFINED" value="6.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="UNDEFINED" value="7.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="doubleFeature:stats">
@@ -944,12 +1335,17 @@
       </dailyData>
       <dailyData date="12-08-2018">
         <observation name="average" value="0.0" />
+<<<<<<< HEAD
         <observation name="count" value="5.0" />
+=======
+        <observation name="count" value="11.0" />
+>>>>>>> sockets2
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
       </dailyData>
       <dailyData date="14-08-2018">
+<<<<<<< HEAD
         <observation name="average" value="1754.498845" />
         <observation name="count" value="433.0" />
         <observation name="max" value="10000.0" />
@@ -962,6 +1358,13 @@
         <observation name="max" value="10000.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="5178277.208467" />
+=======
+        <observation name="average" value="0.0" />
+        <observation name="count" value="13.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="itemPosition">
@@ -969,11 +1372,15 @@
         <observation name="0" value="6.0" />
       </dailyData>
       <dailyData date="14-08-2018">
+<<<<<<< HEAD
         <observation name="0" value="106.0" />
         <observation name="1" value="1.0" />
       </dailyData>
       <dailyData date="18-08-2018">
         <observation name="0" value="15.0" />
+=======
+        <observation name="0" value="3.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="mnemonicsUsage">
@@ -982,12 +1389,17 @@
         <observation name="withMnemonics" value="0.0" />
       </dailyData>
       <dailyData date="14-08-2018">
+<<<<<<< HEAD
         <observation name="total" value="87.0" />
         <observation name="withMnemonics" value="2.0" />
       </dailyData>
       <dailyData date="18-08-2018">
         <observation name="total" value="15.0" />
         <observation name="withMnemonics" value="1.0" />
+=======
+        <observation name="total" value="3.0" />
+        <observation name="withMnemonics" value="0.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="prefixLength">
@@ -997,6 +1409,7 @@
         <observation name="4" value="3.0" />
       </dailyData>
       <dailyData date="14-08-2018">
+<<<<<<< HEAD
         <observation name="1" value="20.0" />
         <observation name="2" value="31.0" />
         <observation name="3" value="42.0" />
@@ -1011,6 +1424,11 @@
         <observation name="4" value="3.0" />
         <observation name="5" value="2.0" />
         <observation name="7" value="1.0" />
+=======
+        <observation name="2" value="1.0" />
+        <observation name="3" value="1.0" />
+        <observation name="4" value="1.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
     <factor id="timeBetweenTyping">
@@ -1019,6 +1437,7 @@
         <observation name="count" value="28.0" />
       </dailyData>
       <dailyData date="12-08-2018">
+<<<<<<< HEAD
         <observation name="average" value="115.285714" />
         <observation name="count" value="7.0" />
       </dailyData>
@@ -1029,6 +1448,14 @@
       <dailyData date="18-08-2018">
         <observation name="average" value="236.102564" />
         <observation name="count" value="117.0" />
+=======
+        <observation name="average" value="167.272727" />
+        <observation name="count" value="11.0" />
+      </dailyData>
+      <dailyData date="14-08-2018">
+        <observation name="average" value="232.846154" />
+        <observation name="count" value="13.0" />
+>>>>>>> sockets2
       </dailyData>
     </factor>
   </component>
@@ -1137,7 +1564,13 @@
       <workItem from="1533941472741" duration="430000" />
       <workItem from="1533941908331" duration="249000" />
       <workItem from="1533942210003" duration="1193000" />
+<<<<<<< HEAD
       <workItem from="1533949683201" duration="4025000" />
+=======
+      <workItem from="1533949683201" duration="4907000" />
+      <workItem from="1534115111901" duration="269000" />
+      <workItem from="1534289758652" duration="1375000" />
+>>>>>>> sockets2
     </task>
     <task id="LOCAL-00001" summary="sockets server. initial commit">
       <created>1533941823868</created>
@@ -1185,10 +1618,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="27074000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="58" y="22" width="1517" height="940" extended-state="0" />
+=======
+    <option name="totallyTimeSpent" value="8423000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="452" y="22" width="1517" height="940" extended-state="0" />
+    <editor active="true" />
+>>>>>>> sockets2
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17016949" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1239,6 +1680,7 @@
     <entry file="file://$PROJECT_DIR$/server/server-sockets.c" />
     <entry file="file://$PROJECT_DIR$/server/server-sockets.h" />
     <entry file="file://$PROJECT_DIR$/sockets/CMakeLists.txt" />
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/sockets/server/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-591">
@@ -1246,6 +1688,8 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sockets/server/server-sockets.c">
+=======
     <entry file="file://$PROJECT_DIR$/sockets/server/server-sockets.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1257,6 +1701,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sockets/client/main.c">
+>>>>>>> sockets2
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/sockets/server/server-sockets.h">
+=======
+    <entry file="file://$PROJECT_DIR$/sockets/server/main.c">
+>>>>>>> sockets2
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="37" column="52" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
         </state>
       </provider>
     </entry>
