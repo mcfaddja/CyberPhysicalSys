@@ -165,7 +165,7 @@ void loop()
   Serial.println("connection closed!!!");
 
 
-  delay(1001);
+  delay(250);
 }
 
 
