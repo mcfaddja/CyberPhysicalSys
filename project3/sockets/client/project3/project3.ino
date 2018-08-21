@@ -91,47 +91,47 @@ void loop()
   Serial.println("got ALL the data!!!");
 
 
-  memset(buff, '\n', 1);
-  strcat(buff, "{\r\n");
+//  memset(buff, '\n', 1);
+//  strcat(buff, "{\r\n");
 
-  snprintf(miniBuff, sizeof(miniBuff), "\t\"Device ID\" : \"%s\"\r\n", theData.device_id);
+  snprintf(miniBuff, sizeof(miniBuff), "%s\r\n", theData.device_id);
   strcat(buff, miniBuff);
 
-  snprintf(miniBuff, sizeof(miniBuff), "\t\"Sensor ID\" : \"%s\"\r\n", theData.sensor_id);
+  snprintf(miniBuff, sizeof(miniBuff), "%s\r\n", theData.sensor_id);
   strcat(buff, miniBuff);
 
-  snprintf(miniBuff, sizeof(miniBuff), "\t\"gx\" : %f8\r\n", theData.dgx);
+  snprintf(miniBuff, sizeof(miniBuff), "%f\r\n", theData.dgx);
   strcat(buff, miniBuff);
 
-  snprintf(miniBuff, sizeof(miniBuff), "\t\"gy\" : %f8\r\n", theData.dgy);
+  snprintf(miniBuff, sizeof(miniBuff), "%f\r\n", theData.dgy);
   strcat(buff, miniBuff);
 
-  snprintf(miniBuff, sizeof(miniBuff), "\t\"gz\" : %f8\r\n", theData.dgz);
+  snprintf(miniBuff, sizeof(miniBuff), "%f\r\n", theData.dgz);
   strcat(buff, miniBuff);
 
-  snprintf(miniBuff, sizeof(miniBuff), "\t\"ax\" : %f8\r\n", theData.dax);
+  snprintf(miniBuff, sizeof(miniBuff), "%f\r\n", theData.dax);
   strcat(buff, miniBuff);
 
-  snprintf(miniBuff, sizeof(miniBuff), "\t\"ay\" : %f8\r\n", theData.day);
+  snprintf(miniBuff, sizeof(miniBuff), "%f\r\n", theData.day);
   strcat(buff, miniBuff);
 
-  snprintf(miniBuff, sizeof(miniBuff), "\t\"az\" : %f8\r\n", theData.daz);
+  snprintf(miniBuff, sizeof(miniBuff), "%f\r\n", theData.daz);
   strcat(buff, miniBuff);
 
-  snprintf(miniBuff, sizeof(miniBuff), "\t\"mx\" : %f8\r\n", theData.dmx);
+  snprintf(miniBuff, sizeof(miniBuff), "%f\r\n", theData.dmx);
   strcat(buff, miniBuff);
 
-  snprintf(miniBuff, sizeof(miniBuff), "\t\"my\" : %f8\r\n", theData.dmy);
+  snprintf(miniBuff, sizeof(miniBuff), "%f\r\n", theData.dmy);
   strcat(buff, miniBuff);
 
-  snprintf(miniBuff, sizeof(miniBuff), "\t\"mz\" : %f8\r\n", theData.dmz);
+  snprintf(miniBuff, sizeof(miniBuff), "%f\r\n", theData.dmz);
   strcat(buff, miniBuff);
 
-  snprintf(miniBuff, sizeof(miniBuff), "}\r\n");
-  strcat(buff, miniBuff);
-
-  snprintf(miniBuff, sizeof(miniBuff), "\r\n");
-  strcat(buff, miniBuff);
+//  snprintf(miniBuff, sizeof(miniBuff), "}\r\n");
+//  strcat(buff, miniBuff);
+//
+//  snprintf(miniBuff, sizeof(miniBuff), "\r\n");
+//  strcat(buff, miniBuff);
 
   Serial.printf("%s\n", buff);
   Serial.printf("%d\n\n", strlen(buff));
@@ -150,7 +150,7 @@ void loop()
   if (!client.connect(host, port)) {
     Serial.println("connection failed");
     Serial.println("wait 5 sec...");
-    delay(5000);
+    delay(2500);
     return;
   }
 
@@ -160,7 +160,7 @@ void loop()
   client.println(buff);
   Serial.println("data sent, closing connection...");
   
-  client.println("\n transmission DONE!!! \n \n");
+//  client.println("\n transmission DONE!!! \n \n");
   client.stop();
   Serial.println("connection closed!!!");
 
@@ -212,7 +212,7 @@ void connectIMU() {
   Serial.println("IMU is up!!!");
 }
 
-void getChipID(struct imu_datapoint theData) {
+void getChipID(struct imu_datapoint &theData) {
   chipid = ESP.getEfuseMac();
   sprintf(idStr1, "%04X", (uint16_t)(chipid >> 32));
   sprintf(idStr2, "%08X", (uint32_t)chipid);
@@ -223,7 +223,7 @@ void getChipID(struct imu_datapoint theData) {
   theData.sensor_id = "1";
 }
 
-void getGyroData(struct imu_datapoint theData) {
+void getGyroData(struct imu_datapoint &theData) {
   Serial.println("\t getting gyro data...");
   imu.readGyro();
   theData.dgx = imu.calcGyro(imu.gx);
@@ -238,7 +238,7 @@ void getGyroData(struct imu_datapoint theData) {
   Serial.println(imu.calcGyro(imu.gz), 2);
 }
 
-void getAccelData(struct imu_datapoint theData) {
+void getAccelData(struct imu_datapoint &theData) {
   Serial.println("\t getting acceleration data...");
   imu.readAccel();
   theData.dax = imu.calcAccel(imu.ax);
@@ -250,7 +250,7 @@ void getAccelData(struct imu_datapoint theData) {
   Serial.println(theData.daz, 2);
 }
 
-void getMagData(struct imu_datapoint theData) {
+void getMagData(struct imu_datapoint &theData) {
   Serial.println("\t getting magnetometer data...");
   imu.readMag();
   theData.dmx = imu.calcMag(imu.mx);
