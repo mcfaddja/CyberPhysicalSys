@@ -140,7 +140,7 @@ void loop()
   Serial.println("Starting connection to server... ");
 
   const uint16_t port = 5000;
-  const char * host = "192.168.1.39";
+  const char * host = "192.168.1.40";
 
   Serial.print("connecting to ");
   Serial.println(host);
