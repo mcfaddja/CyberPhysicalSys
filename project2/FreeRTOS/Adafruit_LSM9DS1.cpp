@@ -19,49 +19,14 @@
  CONSTRUCTOR
  ***************************************************************************/
 
-// void Adafruit_LSM9DS1::initI2C( TwoWire* wireBus, int32_t sensorID ) {
-//     _i2c = true;
-//     _wire = wireBus;
-//     _lsm9dso_sensorid_accel = sensorID + 1;
-//     _lsm9dso_sensorid_mag = sensorID + 2;
-//     _lsm9dso_sensorid_gyro = sensorID + 3;
-//     _lsm9dso_sensorid_temp = sensorID + 4;
-//     _accelSensor = Sensor(this, &Adafruit_LSM9DS1::readAccel, &Adafruit_LSM9DS1::getAccelEvent, &Adafruit_LSM9DS1::getAccelSensor);
-//     _magSensor   = Sensor(this, &Adafruit_LSM9DS1::readMag,   &Adafruit_LSM9DS1::getMagEvent,   &Adafruit_LSM9DS1::getMagSensor);
-//     _gyroSensor  = Sensor(this, &Adafruit_LSM9DS1::readGyro,  &Adafruit_LSM9DS1::getGyroEvent,  &Adafruit_LSM9DS1::getGyroSensor);
-//     _tempSensor  = Sensor(this, &Adafruit_LSM9DS1::readTemp,  &Adafruit_LSM9DS1::getTempEvent,  &Adafruit_LSM9DS1::getTempSensor);
-// }
 
-
-// default
 Adafruit_LSM9DS1::Adafruit_LSM9DS1( int32_t sensorID ) {
-    //initI2C(&Wire, sensorID);
     initSPI();
 }
 
-// Adafruit_LSM9DS1::Adafruit_LSM9DS1( TwoWire* wireBus, int32_t sensorID ) {
-//     initI2C(wireBus, sensorID);
-// }
 
-// Adafruit_LSM9DS1::Adafruit_LSM9DS1(gpio_num_t xgcs, gpio_num_t mcs, int32_t sensorID ) {
-//   //_i2c = false;
-//   // hardware SPI!
-//   _csm = mcs;
-//   _csxg = xgcs;
-//   _mosi = _miso = _clk = -1;
-//   _lsm9dso_sensorid_accel = sensorID + 1;
-//   _lsm9dso_sensorid_mag = sensorID + 2;
-//   _lsm9dso_sensorid_gyro = sensorID + 3;
-//   _lsm9dso_sensorid_temp = sensorID + 4;
-//   _accelSensor = Sensor(this, &Adafruit_LSM9DS1::readAccel, &Adafruit_LSM9DS1::getAccelEvent, &Adafruit_LSM9DS1::getAccelSensor);
-//   _magSensor   = Sensor(this, &Adafruit_LSM9DS1::readMag,   &Adafruit_LSM9DS1::getMagEvent,   &Adafruit_LSM9DS1::getMagSensor);
-//   _gyroSensor  = Sensor(this, &Adafruit_LSM9DS1::readGyro,  &Adafruit_LSM9DS1::getGyroEvent,  &Adafruit_LSM9DS1::getGyroSensor);
-//   _tempSensor  = Sensor(this, &Adafruit_LSM9DS1::readTemp,  &Adafruit_LSM9DS1::getTempEvent,  &Adafruit_LSM9DS1::getTempSensor);
-// }
 
 Adafruit_LSM9DS1::Adafruit_LSM9DS1(gpio_num_t sclk, gpio_num_t smiso, gpio_num_t smosi, gpio_num_t xgcs, gpio_num_t mcs, int32_t sensorID ) {
-  //_i2c = false;
-  // software SPI!
   _csm = mcs;
   _csxg = xgcs;
   _mosi = smosi;
@@ -132,34 +97,6 @@ void Adafruit_LSM9DS1::test()
 
 bool Adafruit_LSM9DS1::begin()
 {
-//   if (_i2c) {
-//     _wire->begin();
-//   } else if (_clk == -1) {
-//     // Hardware SPI
-//     pinMode(_csxg, OUTPUT);
-//     pinMode(_csm, OUTPUT);
-//     digitalWrite(_csxg, HIGH);
-//     digitalWrite(_csm, HIGH);
-//     SPI.begin();
-//   } else {
-    //Serial.println("softSPI");
-    // Sofware SPI
-    // gpio_set_direction(_clk, GPIO_MODE_OUTPUT);
-    // gpio_set_direction(_mosi, GPIO_MODE_OUTPUT);
-    // gpio_set_direction(_miso, GPIO_MODE_OUTPUT);
-    // gpio_set_direction(_csxg, GPIO_MODE_OUTPUT);
-    // gpio_set_direction(_csm, GPIO_MODE_OUTPUT);
-    // gpio_pullup_en(_csxg);
-    // gpio_pullup_en(_csm);
-    // gpio_pullup_en(_clk);
-//  }
-
-    // test
-    //write8(XGTYPE, LSM9DS1_REGISTER_CTRL_REG4, 0xFE);
-    //byte first = read8(XGTYPE, LSM9DS1_REGISTER_CTRL_REG4);
-    //cout << "first value is " << bitset<8>(first) << endl;
-
-
     // soft reset & reboot accel/gyro
     write8(XGTYPE, LSM9DS1_REGISTER_CTRL_REG8, 0x05);
 
@@ -188,9 +125,7 @@ bool Adafruit_LSM9DS1::begin()
     write8(XGTYPE, LSM9DS1_REGISTER_CTRL_REG6_XL, 0xC0); // 1 KHz out data rate, BW set by ODR, 408Hz anti-aliasing
 
     // enable mag continuous
-    //write8(MAGTYPE, LSM9DS1_REGISTER_CTRL_REG1_M, 0xFC); // high perf XY, 80 Hz ODR
     write8(MAGTYPE, LSM9DS1_REGISTER_CTRL_REG3_M, 0x00); // continuous mode
-    //write8(MAGTYPE, LSM9DS1_REGISTER_CTRL_REG4_M, 0x0C); // high perf Z mode
 
     // Set default ranges for the various sensors  
     setupAccel(LSM9DS1_ACCELRANGE_2G);
@@ -421,40 +356,7 @@ void Adafruit_LSM9DS1::getSensor(sensor_t *accel, sensor_t *mag,
  ***************************************************************************/
 void Adafruit_LSM9DS1::write8(boolean type, byte reg, byte value)
 {
-  //byte address, 
-//   gpio_num_t _cs;
-
-//   if (type == MAGTYPE) {
-//     //address = LSM9DS1_ADDRESS_MAG;
-//     _cs = _csm;
-//   } else {
-//     //address = LSM9DS1_ADDRESS_ACCELGYRO;
-//     _cs = _csxg;
-//   }
-//   if (_i2c) {
-//     _wire->beginTransmission(address);
-//     _wire->write(reg);
-//     _wire->write(value);
-//     _wire->endTransmission();
-//     /*
-//     Serial.print("0x"); Serial.print(address, HEX);
-//     Serial.print(" $"); Serial.print(reg, HEX); Serial.print(" = ");
-//     Serial.println(value, HEX);
-//     */
-//   } else {
-    //gpio_pullup_dis(_cs);
-    // if (_clk == -1)     // hardware SPI
-    //   SPI.beginTransaction(SPISettings(2000000, MSBFIRST, SPI_MODE3));
-    // set address
-    
-    digitalWrite(type, reg, value);
-    //spixfer(type, reg & 0x7F, 0, nullptr); // write data
-    //spixfer(type, value, 0, nullptr);
-    // if (_clk == -1)     // hardware SPI
-    //   SPI.endTransaction();
-    //gpio_pullup_en(_cs);
-
-//   }
+  digitalWrite(type, reg, value);
 }
 
 byte Adafruit_LSM9DS1::read8(boolean type, byte reg)
@@ -468,75 +370,10 @@ byte Adafruit_LSM9DS1::read8(boolean type, byte reg)
 
 byte Adafruit_LSM9DS1::readBuffer(boolean type, byte reg, byte len, uint8_t *buffer)
 {
-  //byte address, 
-//   gpio_num_t _cs;
-
-//   if (type == MAGTYPE) {
-//     //address = LSM9DS1_ADDRESS_MAG;
-//     _cs = _csm;
-//   } else {
-//     //address = LSM9DS1_ADDRESS_ACCELGYRO;
-//     _cs = _csxg;
-//   }
-
-//   if (_i2c) {
-//     _wire->beginTransmission(address);
-//     _wire->write(reg);
-//     _wire->endTransmission();
-//     if (_wire->requestFrom(address, (byte)len) != len) {
-//       return 0;
-//     }
-
-//     /*
-//       Serial.print("0x"); Serial.print(address, HEX);
-//       Serial.print(" $"); Serial.print(reg, HEX); Serial.print(": ");
-//     */
-
-//     for (uint8_t i=0; i<len; i++) {
-//       buffer[i] = _wire->read();
-//       //Serial.print(buffer[i], HEX); Serial.print(", ");
-//     }
-//     //Serial.println();
-
-//   } else {
-    // if (_clk == -1)     // hardware SPI
-    //   SPI.beginTransaction(SPISettings(2000000, MSBFIRST, SPI_MODE3));
-    // else
-      //gpio_pullup_dis(_clk);
-    // set address
-
-    //gpio_pullup_dis(_cs);
-
     digitalRead(type, reg, len, buffer);
-    //spixfer(type, reg | 0x80, 0, nullptr); // readdata
-    //for (uint8_t i=0; i<len; i++) {
-    //spixfer(type, 0, len, buffer);
-    //}
-    // if (_clk == -1)     // hardware SPI
-    //   SPI.endTransaction();
-    // else
-    //  gpio_pullup_en(_clk);
-    //gpio_pullup_en(_cs);
 
   return len;
 }
-
-// esp_err_t Adafruit_LSM9DS1::spixfer(boolean type, uint8_t data, byte len, uint8_t *buffer) {
-// //   if (_clk == -1) {
-// //       //Serial.println("Hardware SPI");
-// //       return SPI.transfer(data);
-// //   } else {
-//     //Serial.println("Software SPI");
-//     esp_err_t result = ESP_OK;    
-//     //for (int i=7; i>=0; i--) {
-//       //reply <<= 1;
-//       gpio_pullup_dis(_clk);
-//       digitalWrite(type, data /*& (1<<i)*/);
-//       gpio_pullup_en(_clk);
-//       result = digitalRead(type, len, buffer);
-//     // }
-//     return result;
-// }
 
 esp_err_t Adafruit_LSM9DS1::digitalRead(boolean type, uint8_t reg, byte len, uint8_t *buffer) {
     spi_device_handle_t dev = {};
@@ -593,12 +430,9 @@ esp_err_t Adafruit_LSM9DS1::digitalWrite(boolean type, uint8_t reg, byte value) 
     spi_transaction_t   t   = {};
     esp_err_t           err = ESP_OK;
 
-    //cout << "Before reg is " << bitset<8>(reg) << endl;
     byte cmd = reg;
     cmd &= 0x7F;
-    //cout << "After reg is " << bitset<8>(cmd) << endl;
-    //cout << "Value is " << bitset<8>(value) << endl;
-
+    
     if (type == MAGTYPE)
         dev = mDevice;
     else
@@ -665,9 +499,7 @@ void Adafruit_LSM9DS1::getTempEvent(sensors_event_t* event, uint32_t timestamp) 
   event->sensor_id = _lsm9dso_sensorid_temp;
   event->type      = SENSOR_TYPE_AMBIENT_TEMPERATURE;
   event->timestamp = timestamp;
-  // This is just a guess since the staring point (21C here) isn't documented :(
   event->temperature = 21.0 + (float)temperature/8;
-  //event->temperature /= LSM9DS1_TEMP_LSB_DEGREE_CELSIUS;
 }
 
 void Adafruit_LSM9DS1::getAccelSensor(sensor_t* sensor) {

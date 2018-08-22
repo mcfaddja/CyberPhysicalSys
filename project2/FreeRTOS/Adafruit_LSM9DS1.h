@@ -15,13 +15,7 @@
 #ifndef __LSM9DS1_H__
 #define __LSM9DS1_H__
 
-//#if (ARDUINO >= 100)
-// #include "Arduino.h"
-//#else
-// #include "WProgram.h"
-//#endif
-//#include "Wire.h"
-//#include <SPI.h>
+
 #include <bitset>
 #include <cstdbool>
 #include <cstdlib>
@@ -94,11 +88,8 @@ class Adafruit_LSM9DS1
 {
   public:
     Adafruit_LSM9DS1 ( int32_t sensorID = 0 );
-    //Adafruit_LSM9DS1 ( TwoWire* wireBus, int32_t sensorID = 0 );
-    //Adafruit_LSM9DS1 ( gpio_num_t xmcs, gpio_num_t gcs, int32_t sensorID = 0 );
     Adafruit_LSM9DS1 ( gpio_num_t clk, gpio_num_t miso, gpio_num_t mosi, gpio_num_t xmcs, gpio_num_t gcs, int32_t sensorID = 0 );
     
-    //void initI2C( TwoWire* wireBus, int32_t sensorID );
     void initSPI();
 
 
