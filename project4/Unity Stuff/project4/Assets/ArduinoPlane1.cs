@@ -20,7 +20,7 @@ public class ArduinoPlane1 : MonoBehaviour
         string[] acc = serial.ReadLine().Split(',');
         string[] gyr = serial.ReadLine().Split(',');
         string[] mag = serial.ReadLine().Split(',');
-        Quaternion rot = Quaternion.Euler(new Vector3(float.Parse(gyr[0]), float.Parse(gyr[1]), float.Parse(gyr[2])));
+        Quaternion rot = Quaternion.Euler(new Vector3(float.Parse(gyr[0])*10.0f, float.Parse(gyr[1])*10.0f, float.Parse(gyr[2])*10.0f));
         transform.rotation = Quaternion.Slerp(transform.rotation, rot, Time.deltaTime * 2.0f);
     }
 }
