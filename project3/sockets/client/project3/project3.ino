@@ -79,7 +79,6 @@ void loop()
   theData.device_id = idStr;
 
   theData.sensor_id = "1";
-//  getChipID(theData);
   
   Serial.println("Data storage successfully initialized!!!");
 
@@ -90,9 +89,6 @@ void loop()
   getMagData(theData);
   Serial.println("got ALL the data!!!");
 
-
-//  memset(buff, '\n', 1);
-//  strcat(buff, "{\r\n");
 
   snprintf(miniBuff, sizeof(miniBuff), "%s\r\n", theData.device_id);
   strcat(buff, miniBuff);
@@ -126,12 +122,6 @@ void loop()
 
   snprintf(miniBuff, sizeof(miniBuff), "%f\r\n", theData.dmz);
   strcat(buff, miniBuff);
-
-//  snprintf(miniBuff, sizeof(miniBuff), "}\r\n");
-//  strcat(buff, miniBuff);
-//
-//  snprintf(miniBuff, sizeof(miniBuff), "\r\n");
-//  strcat(buff, miniBuff);
 
   Serial.printf("%s\n", buff);
   Serial.printf("%d\n\n", strlen(buff));

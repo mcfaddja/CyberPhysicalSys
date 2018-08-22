@@ -8,7 +8,6 @@ from datetime import datetime, date, timedelta
 import re
 
 
-n = 0
 
 class MyIMUdataHandler(socketserver.StreamRequestHandler):
 
@@ -26,12 +25,10 @@ class MyIMUdataHandler(socketserver.StreamRequestHandler):
         data = []
         for i in range(len(self.data)):
             tmpROW = self.data[i].decode("utf-8")
-            # tmpROW = tmpROW[1:]
             tmpROW = re.sub('[\r\n]', '', tmpROW)
             data.append(tmpROW)
 
         tblName = data[0] + "-" + data[1]
-        # print(tblName)
         TABLES = {}
         TABLES[tblName] = (
             "CREATE TABLE `{}` ("
@@ -48,15 +45,13 @@ class MyIMUdataHandler(socketserver.StreamRequestHandler):
             "   `my` FLOAT NOT NULL,"
             "   `mz` FLOAT NOT NULL,"
             "   `date_time_pt` TIMESTAMP(2) NOT NULL,"
-            # "   `mu_s` INT NOT NULL,"
             "   PRIMARY KEY (`datapt_id`),"
             "   UNIQUE INDEX `datapt_id_UNIQUE` (`datapt_id` ASC) VISIBLE"
             ") ENGINE=InnoDB".format(tblName)
         )
 
-        # print(TABLES[tblName])
+
         cursor = cnx.cursor()
-        # for name, ddl in TABLES.iteritems():
         try:
             print("Creating table {}: ".format(tblName), end='')
             cursor.execute(TABLES[tblName])
@@ -91,12 +86,7 @@ class MyIMUdataHandler(socketserver.StreamRequestHandler):
         cursor.execute(add_datapt, aDataPT)
         cnx.commit()
 
-
-
-        # print(self.data)
-        # print(type(self.data))
         print(data)
-
 
         cursor.close()
         cnx.close()
