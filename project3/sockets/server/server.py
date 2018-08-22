@@ -4,7 +4,7 @@ import socketserver
 import mysql.connector
 from mysql.connector import errorcode
 import time
-from datetime import datetime, data, timedelta
+from datetime import datetime, date, timedelta
 import re
 
 
@@ -18,7 +18,8 @@ class MyIMUdataHandler(socketserver.StreamRequestHandler):
 
         myTime = datetime.now()
         print(myTime.year, myTime.month, myTime.day, myTime.hour, myTime.minute, myTime.second, myTime.microsecond)
-        
+        print(myTime)
+
         # self.data = self.request.recv(1024).strip()
         self.data = self.rfile.readlines()
 
@@ -34,7 +35,7 @@ class MyIMUdataHandler(socketserver.StreamRequestHandler):
         TABLES = {}
         TABLES[tblName] = (
             "CREATE TABLE `{}` ("
-            "   `datapt_id` INT NOT NULL AUTO_INCREMENT,"
+            "   `datapt_id` BIGINT(100) NOT NULL AUTO_INCREMENT,"
             "   `device_id` VARCHAR(45) NOT NULL,"
             "   `sensor_id` VARCHAR(45) NOT NULL,"
             "   `gx` FLOAT NOT NULL,"
@@ -46,8 +47,8 @@ class MyIMUdataHandler(socketserver.StreamRequestHandler):
             "   `mx` FLOAT NOT NULL,"
             "   `my` FLOAT NOT NULL,"
             "   `mz` FLOAT NOT NULL,"
-            "   `date_time_pt` DATETIME NOT NULL,"
-            "   `mu_s` INT NOT NULL,"
+            "   `date_time_pt` TIMESTAMP(2) NOT NULL,"
+            # "   `mu_s` INT NOT NULL,"
             "   PRIMARY KEY (`datapt_id`),"
             "   UNIQUE INDEX `datapt_id_UNIQUE` (`datapt_id` ASC) VISIBLE"
             ") ENGINE=InnoDB".format(tblName)
@@ -68,6 +69,27 @@ class MyIMUdataHandler(socketserver.StreamRequestHandler):
             print("OK!")
 
         
+        add_datapt = ("INSERT INTO `{}` "
+                      "(device_id, sensor_id, gx, gy, gz, ax, ay, az, mx, my, mz, date_time_pt) "
+                      "VALUES (%(devID)s, %(senID)s, %(gx)s, %(gy)s, %(gz)s, %(ax)s, %(ay)s, %(az)s, %(mx)s, %(my)s, %(mz)s, %(date_time_pt)s)".format(tblName))
+
+        aDataPT = {
+            'devID': data[0],
+            'senID': data[1],
+            'gx': float(data[2]),
+            'gy': float(data[3]),
+            'gz': float(data[4]),
+            'ax': float(data[5]),
+            'ay': float(data[6]),
+            'az': float(data[7]),
+            'mx': float(data[8]),
+            'my': float(data[9]),
+            'mz': float(data[10]),
+            'date_time_pt': myTime,
+        }
+
+        cursor.execute(add_datapt, aDataPT)
+        cnx.commit()
 
 
 
